@@ -1,0 +1,411 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title></title>
+    <style>
+		
+		body{
+			
+		
+		
+           font-family: Arial;
+
+
+		}
+
+.navbar {
+  width: 70%;
+  background-color: #555;
+  overflow: auto;
+}
+
+/* Navbar links */
+.navbar a {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Navbar links on mouse-over */
+.navbar a:hover {
+  background-color: #000;
+}
+
+/* Current/active navbar link */
+.active {
+  background-color: #04AA6D;
+}
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+               
+                h1{
+                    color: gold;
+                   
+                
+                }
+				/* p{
+					margin-top: 100px;
+                    margin-left: 250px;
+                    margin-right: 250px;
+					font-size: 20px;
+				} */
+	 .form-style-9{
+		text-decoration: none;
+	                max-width: 350px;
+	                background: none;
+                	padding: 20px;
+                	margin: 20px auto;
+	                box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.35);
+                   	border-radius: 4px;
+	                border: 4px solid goldenrod;
+                    margin-left:700px;
+	                margin-top: 0px;
+	 }
+    
+	.home{
+		background: url("{% static "images/fossil-fuel-hero.jpg" %}");
+			background-size: 100%;
+			
+  
+            background-position: center center;
+
+            background-repeat: no-repeat;
+			height: 450px;
+			margin: 0px;
+	}
+                    
+
+ sub{
+	   font-style: italic;
+       font-size: 10px;
+}        
+
+ div h1{
+	    background: gold;
+		color: mediumvioletred;
+        font-size: 40p;
+        text-decoration: none;
+		margin-right: -50px;
+        
+        margin-top: 63px;
+        margin-left: 600px;
+        font-style: normal;
+        display: inline-block;
+}
+.form-style-9 ul{
+	padding:0;
+	margin:0;
+	list-style:none;
+}
+.form-style-9 ul li{
+	display: block;
+	margin-bottom: 10px;
+	min-height: 35px;
+	display: flex;
+    justify-content: space-between;
+}
+
+.form-style-9 ul li  .field-style{
+	box-sizing: border-box; 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; 
+	padding: 8px;
+	outline: none;
+	border: 1px solid #B0CFE0;
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+
+}.form-style-9 ul li  .field-style:focus{
+	box-shadow: 0 0 5px #B0CFE0;
+	border:1px solid #B0CFE0;
+}
+.form-style-9 ul li .field-split{
+	width: 49%;
+}
+.form-style-9 ul li .field-full{
+	width: 100%;
+}
+.form-style-9 ul li input.align-left{
+	float:left;
+}
+.form-style-9 ul li input.align-right{
+	float:right;
+}
+.form-style-9 ul li textarea{
+	
+	width: 100%;
+    height: 83px;
+}
+.form-style-9 ul li input[type="button"], 
+.form-style-9 ul li input[type="submit"] {
+	-moz-box-shadow: inset 0px 1px 0px 0px #3985B1;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #3985B1;
+	box-shadow: inset 0px 1px 0px 0px #3985B1;
+	background-color: #216288;
+	border: 1px solid #17445E;
+	display: inline-block;
+	cursor: pointer;
+	color: #FFFFFF;
+	padding: 8px 18px;
+	text-decoration: none;
+	font: 12px Arial, Helvetica, sans-serif;
+}
+.form-style-9 ul li input[type="button"]:hover, 
+.form-style-9 ul li input[type="submit"]:hover {
+	background: linear-gradient(to bottom, #2D77A2 5%, #337DA8 100%);
+	background-color: #28739E;
+}
+.abc{
+	 /* background: url({% static "images/6.jpg" %}); */
+} 
+h2{
+	color: #D8000C;
+	background-color: #FFBABA;
+	background-image: url('https://i.imgur.com/GnyDvKN.png');
+}
+
+
+   
+        .ab{
+			background: rgb(26, 26, 26);
+			height: 100px;
+			margin-top: 15px;
+			display: flex;
+			margin: 0;
+			justify-content: space-around;
+		}
+		.ab img{
+			height: 60px;
+		}
+		.ab ul {
+			
+            margin-right: 10px;
+			/* font-size: 25px; */
+			/* display: flex; */
+            list-style-type: none; 
+            align-items: center;
+            width: 100%;
+			height: 100%;
+            justify-content: flex-end;
+            color: #fff; 
+ } 
+
+
+
+		.ab ul li{
+			box-sizing: border-box;
+			color: #fff;
+		}
+		.ab ul li a{
+			
+			color: #fff;
+			text-decoration: none;
+            
+		}
+		.app{
+			   padding: 2px;
+               background: green;
+               margin: 10px;
+			   display: initial;
+			   cursor: pointer; */
+ }
+		
+		.logout{
+			padding: 2px;
+            background: red;
+			display: inline;
+			cursor: pointer;
+		}
+		.login{
+			    padding: 10px;
+                margin: 40px;
+                background: green;
+				cursor: pointer;
+		}
+
+		.aboutus{
+			padding: 10px;
+            background: yellow;
+            margin: 40px;
+			cursor: pointer;
+
+		}
+		.contact{
+			padding: 10px;
+            background: yellow;
+            margin: 40px;
+			cursor: pointer;
+
+		 }  
+
+				
+				
+ 
+		.reg{
+			padding: 10px;
+            background: yellow;
+            margin: 40px;
+			cursor: pointer;
+		} 
+		 .ab ul li h1{
+			margin: 0px;
+            margin-top: -14px;
+            margin-right: 10px;
+			font-size: 38px;
+			margin: 0px;
+            color: #fff;
+            font-size: 22px;
+     vertical-align: middle; 
+            padding: 6px 8px;
+			
+		}
+		.container{
+
+		    margin-left: 10px;
+			margin-top: 0px;
+			/* margin-top: 30px; */
+			width: 38%;
+		}
+		.w-100 {
+    margin-top: 25px;
+    width: 100%!important;
+}
+    </style>
+    
+</head>
+<body>
+	<nav class="ab">
+		<img src="{% static "images/logo.jpeg" %}" style="height: 100px;">
+	
+		<ul>
+			{% if user.is_superuser %}
+			 <script>alert("Hello,{{user.username}}");</script>
+			 
+			<li><h1 style="margin: 0px;">Hello, {{user.username}}</h1></li>
+			<li class="logout"><a href="accounts/logout">Logout</a></li>
+			<li class="app"><a href="result">View Applications </a></li>
+			<li class="app"><a href="custmer">View Feedback </a></li>
+			{% elif user.is_authenticated %}
+			 <script>alert("Hello,{{user.username}}");</script>
+			 
+			<li><h1 style="margin: 0px;">Hello, {{user.username}}</h1></li>
+			<li class="logout"><a href="accounts/logout">Logout</a></li>
+			<center>
+			<div class="abc">
+				<div>
+					{% for messages in messages %}
+					<h2> {{messages}}</h2>
+					{% endfor %}
+				</div>
+				<h1>For Order the fuel <sub>Need to fill this form</sub></h1>
+	
+					<form class="form-style-9" action="add" method="POST">
+						{% csrf_token %}
+							
+						<ul>
+							<li>
+								<input required type="text" name="name" class="field-style field-split align-left" placeholder="Full Name" minlength="2" maxlength="100"/>
+								<input required type="email" name="email" class="field-style field-split align-right" placeholder="Email" />
+							
+							</li>
+							<li>
+								<input required type="number" name="mobile" class="field-style field-split align-left" placeholder="Phone" minlength="10" maxlength="12"/>
+								
+							<!-- <input type="text" name="fuel" class="field-style field-split align-left" placeholder="Fuel" /> -->
+								
+							<label style="color:gray;font-family: 'Times New Roman', Times, serif;border: #fff;background-color: #fff;">Fuel:</label>					
+  <select name="fuel">
+	
+    <option value="Diesal">Diesel</option>
+    <option value="Pertol">Pertol</option>
+    <option value="CNG">CNG</option>
+    
+  </select>	
+							<input required type="number" name="ammount" class="field-style field-split align-right" placeholder="Amount in Liter " />
+							</li>
+							
+							<li>
+							  <textarea required name="address" class="field-style" placeholder="Complete Address"minlength="20" maxlength="100"></textarea>
+							</li>
+							<li>
+							  <input type="submit" value="Order Now"/>
+							</li>
+						</ul>
+					</form>
+		</div>	
+	</center>		
+			<!-- <li class="app"><a href="result">View Applications </a></li> -->
+			{% else %}
+			<div class="navbar">
+				<a class="active" href="home"><i class="fa fa-fw fa-home"></i> Home</a>
+				<a href="services"><i class="fa fa-fw fa-search"></i> Our Services</a>
+				<a href="aboutus"><i class="fa fa-fw fa-envelope"></i> About Us</a>
+				<a href="contact"><i class="fa fa-fw fa-envelope"></i> Contact Us</a>
+				<a href="accounts/register""><i class="fa fa-fw fa-user"></i>Register</a>
+				<a href="accounts/login"><i class="fa fa-fw fa-user"></i> Login</a>
+			  </div>
+			<!-- <li class="reg"><a href="accounts/register">Register</a></li>
+			<li class="login"><a href="accounts/login">Login</a></li>
+			<li class="aboutus"><a href="aboutus">About Us</a></li>
+			<li class="contact"><a href="contact">Contact Us</a></li>
+			<li class="sevices"><a href="services">Our services</a></li> -->
+
+			{% endif %}
+		</ul>
+	</nav>
+	<div class="home">
+	<div class="container">
+		<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+			<div class="carousel-inner">
+			  <div class="carousel-item active">
+				<img class="d-block w-100" src="{% static "images/1slide.png" %}" alt="First slide">
+			  </div>
+			  <div class="carousel-item">
+				<img class="d-block w-100" src="{% static "images/2slide.jpg" %}" alt="Second slide">
+			  </div>
+			  <div class="carousel-item">
+				<img class="d-block w-100"src="{% static "images/3slide1.jpg" %}" alt="Third slide" style="width: 50%;">
+			  </div>
+			</div>
+			<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+			  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			  <span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+			  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			  <span class="sr-only">Next</span>
+			</a>
+			<p style="margin-top: 10px; background-color: burlywood; font-size: medium;">Oo ! Oo! You don't have time 
+				Contact your friends, he is busy too:(
+				Grab our friendly portal & save your precious time and oder fuel online:)</p>
+		  </div>
+	</div>	
+		
+				
+			
+
+			<!-- <p>gfdhsjkvfhusdasjvzcjh</p> -->
+
+				
+	</div>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>	
+</body>
+</html>

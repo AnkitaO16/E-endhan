@@ -1,0 +1,201 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+   
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Bree+Serif&family=Gideon+Roman&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <style>
+        /* body {
+            background: dodgerblue;
+        } */
+        body{
+            /* height:600px; */
+            /* width: 70vw; */
+            font-family: 'Bree Serif', serif;
+           
+
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: 2px solid black; */
+            /* width: 700px; */
+            margin: 45px;
+            flex-wrap: nowrap
+        }
+
+        .log {
+            display: flex;
+            border: 2px solid black;
+            justify-content: center;
+            align-items: center;
+            width: 267px;
+            height: 362px;
+            background-color: #685e5ec7;
+            border-radius: 17px;
+            color: white;
+            margin-top: 45px;
+        }
+
+        .log input {
+            width: 63%;
+            padding: 0.5rem;
+            margin: 2px 12px;
+            border-radius: 26px;
+            font-size: 0.8rem;
+            padding: 6px 26px;
+
+
+        }
+
+        #submit {
+            width: 60px;
+            height: 30px;
+            /*background-color: ;*/
+            padding: 5px 13px;
+            box-shadow: -2px -2px;
+            transition:all 1s ease-in-out .4s ;
+        }
+
+        #submit:hover {
+            background-color: #eeb1b1;
+            width: 68px;
+            height: 35px;
+            cursor: pointer;
+            /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+
+        }
+   #submit2:hover {
+            background-color: #eeb1b1;
+            width: 68px;
+            height: 35px;
+            cursor: pointer;
+            /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+
+        }
+
+
+
+      
+        .h1-primary{
+            text-align: center;
+            display: block;
+            background-color: #727272;
+            text-shadow: 2px 2px black;
+        }
+      body::before{
+            content: "";
+            position:absolute;
+            z-index: -1;
+            /* background: url(./img/bg.jpg) no-repeat center center/cover; */
+            background-image: url( "{% static 'images/bg.jpg' %}");
+            background-size: 100%;
+  
+  background-position: center center;
+
+  background-repeat: no-repeat;
+            
+            /* background-size: 300px 100px; */
+            /* background-color: black; */
+            /* background-size:contain; */
+            width: 100vw;
+            height: 100vh;
+            opacity: 0.8;
+            top: 0px;
+            left: 0px;
+           
+            
+
+        }
+        #logo img{
+    margin: 3px 6px;
+    height: 48px;
+    transition:all 1s ease-in-out .4s ;
+    /* cursor: pointer; */
+    filter: invert(100%);
+    
+    
+   
+}
+
+.log{
+    display: flex;
+}
+#logo{
+    position: absolute;
+    top: 128px;
+}
+label{
+    margin-left: 23px;
+    text-shadow: 2px 2px black;
+}
+div button{
+        position: absolute;
+    left: 33px;
+    top: 23px;
+    background-color: black;
+    border-radius: 13px;
+    padding: 5px 14px;
+}
+    
+  
+
+div button a{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    
+}
+
+
+
+    
+
+
+
+    </style>
+</head>
+
+<body>
+     <!-- <div class="reg"><button><a href="register"> For Registation </a></button></div>  -->
+     <div><button><a href="../home">  Home</a></button></div> 
+  
+    <div class="container">
+        <div class="log">
+            
+            <div id="logo">
+                <img src="admin.png" alt="">
+            </div>
+            
+           
+         
+            <form action="login" method="POST">
+                {% csrf_token %}
+                <h1 class="h1-primary">Login</h1>
+                <label for="Username">Username:</label>
+                <input required type="text" name="username" placeholder="username">
+                <label for="password">Password:</label>
+                <input required type="password" name="password" placeholder="psassword">
+                <br>
+                <br>
+               
+                    <input type="submit" id="submit"><a href="register" id="submit" style="background-color: white;"> For Registation </a>
+
+            </form>
+        </div>
+        </div>
+        
+        <div>
+            {% for messages in messages %}
+            <h2> {{messages}}</h2>
+            {% endfor %}
+        </div>
+</body>
+
+</html>

@@ -1,0 +1,212 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+body {
+  min-height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  /* display: flex; */
+  /* margin: 0; */
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 40px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  height: 300px;
+  /* background-color: #474e5d; */
+  background-image: url( "{% static 'images/Team.jpg' %}");
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+.back button{
+        position: absolute;
+    left: 33px;
+    top: 23px;
+    background-color: black;
+    border-radius: 13px;
+    padding: 5px 14px;
+}
+    
+  
+
+.back button a{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    
+}
+.fa {
+  background-image: url( "{% static 'images/linkdin.png' %}");
+  /* background-position: center center;
+  background-repeat: no-repeat; */
+  padding: 15px;
+  font-size: 30px;
+  /* width: 100%; */
+  height: fit-content; 
+  text-align: center;
+  /* text-decoration: none; */
+  /* margin: 5px 2px; */
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-linkedin {
+  /* background: #007bb5; */
+  
+  color: white;
+  display: inline-block;
+}
+.text{
+  display: table-cell;
+    /* margin: 82px; */
+    padding: 50px;
+}
+    </style>
+</head>
+<div class="back"><button><a href="home">  Home</a></button></div> 
+<div class="about-section">
+  <!-- <h1>About Us Page</h1>
+  <p>Some text about who we are and what we do.</p>
+  <p>Resize the browser window to see that this page is responsive by the way.</p> -->
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="first_colomn">
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="{% static "images/alok1.jpeg" %}" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>Alok Tripathi</h2>
+        <p class="title">CEO & Founder</p>
+        <p>Contact : 8808670920</p>
+        <!-- <a href = "mailto: aloktripathi481@gmail.com">Send Email</a> -->
+        
+        <!-- <p><button class="button">Contact</button></p> -->
+        <a href="linkedin.com/in/alok-tripathi-63a0b719b" class="fa fa-linkedin"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="text" style="width: 75%;">
+   <p>Even as India moves towards a cleaner and greener economy, the ubiquitous generators  set, being an emergency power backup solution, is here to stay.</p><p>However, generators sets are taken for granted with little or practically no thought spared for issues like fuel management.</p>
+   <p>Fuel management systems are employed in almost every industry to monitor, control and maintain the fuel stock. Generators powered by diesel fuel are known for their fuel efficiency.</p><p>In the event of a power outage or when the power grid is disconnected, these generators provide a backup power supply system for homes, businesses, and offices.</p>
+   <p>Moreover, using the wrong fuel grade or failing to test the quality of the diesel can cause a great deal of malfunction within the genset.</p><p>Additionally, it is common for people to simply store fuel until they need it and use it as needed, which in turn leads to various problems. A good fuel management strategy is therefore necessary to ensure the smooth functioning of diesel gensets.</p>
+    <!-- <p>Mr. Narvar has the unmatched ability to identify, nurture and grow businesses. He not only provides mentorship to the management team in building successful businesses but also proactively guides and supports the management team in critical areas of business. He believes in empowering the youth of the country and in the power of digital technologies to transform nascent business models. He has backed various first-generation entrepreneurs in their journey to success and in fulfilling their dreams.</p> -->
+    <!-- <p>Across his entrepreneurial journey, Mr. Narvar has pursued a vision of building businesses that create a lasting positive impact across the stakeholder ecosystem.</p> -->
+  </div>
+  </div>
+
+  
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="{% static "images/ankita1.jpeg" %}" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>Ankita Ojha</h2>
+        <p class="title">CEO & Co-Founder</p>
+        <p>Contact : 9651039400</p>
+        <!-- <p>Some text that describes me lorem ipsum ipsum lorem.</p> -->
+        <!-- <p>jane@example.com</p> -->
+        <!-- <p><button class="button">Contact</button></p> -->
+        <a href="https://www.linkedin.com/in/ankita-ojha-8655b9195" class="fa fa-linkedin"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="{% static "images/alpi1.jpeg" %}" alt="Mike" style="width:105%">
+      <div class="container">
+        <h2>Alpika Shrivastav</h2>
+        <p class="title">Analyst</p>
+        <!-- <p>Some text that describes me lorem ipsum ipsum lorem.</p> -->
+        <!-- <p>mike@example.com</p> -->
+        <!-- <p><button class="button">Contact</button></p> -->
+        <p>Contact : 9076593499</p>
+        <a href="https://www.linkedin.com/mwlite/in/alpika-srivastava-895746236" class="fa fa-linkedin"></a>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="{% static "images/akash1.jpeg" %}" alt="John" style="width:100%">
+      <div class="container">
+        <h2>Akash Gupta</h2>
+        <p class="title">Designer</p>
+        <p>Contact : 8115582481</p>
+        <!-- <p>Some text that describes me lorem ipsum ipsum lorem.</p> -->
+        <!-- <p>john@example.com</p> -->
+        <!-- <p><button class="button">Contact</button></p> -->
+        <a href="https://www.linkedin.com/in/akash-gupta-88324b1b6" class="fa fa-linkedin"></a>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

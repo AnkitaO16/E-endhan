@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <style>
+        h1{
+            text-align: center;
+            font-size: 40px;
+        }
+#mid::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    
+    background-image: url( "{% static 'images/mid.jpg' %}");
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat; 
+    width: 100%;
+    height: 40%;
+    opacity: 0.5;
+    
+    /* top: 0px; */
+    left: 0px;
+
+}        
+#mid{
+    /* margin-top: 50px; */
+}        
+
+#services .box img{
+    height: 150px;
+    margin: auto;
+    display: block;
+}
+#services{
+    
+			
+		
+    display: flex;
+    margin: 14px;
+}
+#services .box{
+    background-color: beige;
+    border: 2px solid black;
+    border-radius: 14px;
+    margin: 14px;
+    text-align: center;
+    padding: 13px 14px;
+}
+div button{
+        position: absolute;
+    left: 33px;
+    top: 23px;
+    background-color: black;
+    border-radius: 13px;
+    padding: 5px 14px;
+}
+div button a{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    
+}
+    </style>
+</head>
+<body>
+    <div><button><a href="../home">  Home</a></button></div> 
+<section id="services1">
+    <h1>Our services</h1>
+    <div id="services">
+        <div class="box">
+        
+            {% load static %} <img src="{% static "images/tow.png" %}" alt="">
+            <h2>Tow Service</h2>
+           <p>A Tow Services (also called a wrecker, a breakdown truck, recovery vehicle or a breakdown lorry) is a Service used to move disabled, improperly parked, impounded, or otherwise indisposed motor vehicles. This may involve recovering a vehicle damaged in an accident, returning one to a drivable surface in a mishap or inclement weather, or towing or transporting one via flatbed to a repair shop or other location.</p>
+        </div>
+        <div class="box">
+            
+            {% load static %} <img src="{% static "images/delivery.png" %}" alt="">
+            <h2>Delivery</h2>
+           <p>E-Ehdhan  has developed a Web- based technology platform for on-demand fuel delivery service for industrial and commercial customers through approved fuel suppliers. This platform has been integrated with Loyalty program. The platform will provide end-to-end fuel (diesel) delivery solution to the customers. The platform will ensure that delivery is made only to the intended customer with complete transparency.</p>
+        </div>
+        <!-- <div class="box">
+            
+            {% load static %} <img src="{% static "images/discount.png" %}" alt="">
+        
+            <h2>Discounts</h2>
+           <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci doloremque laudantium, ipsam amet laboriosam repudiandae eveniet ea natus? Aspernatur mollitia autem sed accusantium eligendi ipsam fugiat quis, totam aliquid earum! Maiores eaque voluptatibus voluptas suscipit?</p>
+        </div> -->
+    </div>
+</section>
+<section id="mid">
+    <h1>No Need To Worry</h1>
+   <div style="text-align: center;"> <p>Oops! again you forget to refuel your vehicle:</p><p>(
+    Don't act like fool
+      Take smart move
+            Connect with us :)</p></div>
+
+  
+</section>
+    
+</body>
+</html>

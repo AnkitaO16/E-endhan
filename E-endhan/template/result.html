@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            text-align: end;
+    /* text-decoration: none; */
+            display: block;
+        }
+        body{
+            /* background: goldenrod; */
+        }
+        table{
+            width: 100%;
+            margin-top: 75px;
+            padding: 0px;
+            /* background: mintcream; */
+        }
+        h1{
+            font-size: 20px;
+            font-style: italic;
+        }
+        .aa th{
+            font-size: 30px;
+        }
+        div button{
+        position: absolute;
+    left: 33px;
+    top: 23px;
+    background-color: black;
+    border-radius: 13px;
+    padding: 5px 14px;
+}
+    
+  
+
+div button a{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    
+}
+
+    </style>
+</head>
+<body>
+    <div><button><a href="home">  Home</a></button></div> 
+    
+      <table border="4px">
+        
+          <tr class="aa">
+              <th>Name</th>
+              <th>Email</th>
+              <th>Mobile no</th>
+              <th>Fuel_Type</th>
+              <th>Ammount</th>
+              <th>Address</th>
+         </tr>
+         {% for i in s%}   
+          <tr>
+            <td><h1>{{i.name}}</h1></td>
+             <td><h1>{{i.email}}</h1></td>
+             <td> <h1>{{i.mobile}}</h1></td>
+             <td> <h1>{{i.fuel}}</h1></td>
+             <td> <h1>{{i.ammount}}</h1></td>
+            
+             <td><h1>{{i.address}}</h1></td>
+         </tr>
+        {% endfor %}
+      </table>
+      
+     
+     
+
+
+</body>
+</html>
+
+

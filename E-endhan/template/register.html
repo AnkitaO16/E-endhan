@@ -1,0 +1,235 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" media="screen and (max-width: 1170px)" href="phone.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Bree+Serif&family=Gideon+Roman&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        h2{
+            color: red;
+        }
+        body{
+           
+            /* background: blueviolet; */
+             font-family: 'Bree Serif', serif;
+        }
+         
+        #container{
+            display: flex;
+          align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            /* background: url(./main.jpg)no-repeat center center/cover; */
+            background-image: url( "{% static 'images/main.jpg' %}");
+            background-size: 100%;
+  
+            background-position: center center;
+
+            background-repeat: no-repeat;
+            height: 100vh;
+            
+        }
+         .box1 input{
+            width: 63%;
+            padding: 0.5rem;
+            margin: 5px 12px;
+            border-radius: 26px;
+            font-size: 0.8rem;
+            padding: 6px 26px;
+            
+
+             
+         
+     }
+        .box1{
+            
+            display: flex;
+            justify-content: center;
+            align-items: center ;
+            height: 350px;
+            background-color: azure;
+            border: 3px solid black;
+            width: 250px;
+            border-radius: 23px;
+            /* flex-direction: column; */
+
+
+            
+        }
+        .box2{
+            display: flex;
+            justify-content: center;
+        }
+       
+      div button{
+        position: absolute;
+    left: 33px;
+    top: 23px;
+    background-color: black;
+    border-radius: 13px;
+    padding: 5px 14px;
+}
+    
+  
+
+div button a{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    
+}
+       .box1 input[type=submit]{
+           width: 45%;
+           /* background: url(admin.png) center center/cover; */
+           background-image: url( "{% static 'images/admin.jpg' %}");
+            background-size: 100%;
+  
+            background-position: center center;
+
+            background-repeat: no-repeat;
+
+       }
+          
+/* #mid{
+    display: flex;
+flex-direction: column;
+} */
+/* #container::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: url(./main.jpg)no-repeat center center/cover;
+    /* background: black; */
+    /* height: 100vh;
+    width: 100vw;
+    top: 0px;
+            left: 0px;
+            opacity: 0.8; */
+          
+
+/* }  */
+#mid::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    /* background: url(./mid.jpg)no-repeat center center/cover; */
+    background-image: url( "{% static 'images/mid.jpg' %}");
+            background-size: 100%;
+  
+            background-position: center center;
+
+            background-repeat: no-repeat;
+    
+    width: 100%;
+    height: 40%;
+    opacity: 0.5;
+    
+    /* top: 0px; */
+    left: 0px;
+
+}
+#mid{
+    margin-top: 75px;
+}
+#mid1{
+    background-color: #ecd9be;
+    margin-top: 75px;
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+    border: 2px solid #111010;
+    border-radius: 18px;
+    text-align: left;
+
+}
+/* #mid1 div img{
+    height: 231px;
+    width: 286px;
+    position: relative;
+    left:  1026px;
+} */
+
+#services .box img{
+    height: 150px;
+    margin: auto;
+    display: block;
+}
+#services{
+    display: flex;
+    margin: 14px;
+}
+#services .box{
+    background-color: beige;
+    border: 2px solid black;
+    border-radius: 14px;
+    margin: 14px;
+    text-align: center;
+    padding: 13px 14px;
+}
+.image{
+    width: 30%;
+}
+#mid1 .content{
+    display: flex;
+}
+#mid1 .content p {
+            margin-right: 4rem;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <section id="container" class=""container>
+        <div>
+            {% for messages in messages %}
+            <h2> {{messages}}</h2>
+            {% endfor %}
+            <div><button><a href="../home">  Home</a></button></div> 
+        </div>
+        
+        <h1>Register Yourself With Us</h1>
+        <div class="box1"> 
+            
+            <form action="register" method="POST">
+                {% csrf_token %}
+                <input required type="text" name="first_name" placeholder="First Name" minlength="2" maxlength="10"><br>
+                <input  required type="text" name="last_name" placeholder="Last Name" minlength="2" maxlength="10"><br>
+                <input required type="text" name="username" placeholder="Username"minlength="6" maxlength="10"><br>
+                <input required type="email" name="email" placeholder="Email"><br>
+                <input required type="password1" name="password1" placeholder="Password"minlength="6" maxlength="10"><br>
+                <input required type="password2" name="password2" placeholder="Confirm Password"minlength="6" maxlength="10"><br>
+                <input  type="submit"><br>
+            </form>
+            
+        </div>   
+    </section>
+    <!-- <section id="mid1">
+        <h1>Get Fuel At Your Fingertip</h1>
+        <div class="content">
+       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia veniam qui delectus doloribus quasi ea dignissimos molestiae aliquam suscipit natus excepturi aspernatur ullam adipisci unde culpa et esse accusantium nulla autem, fugiat omnis similique voluptates obcaecati! Suscipit maiores tempore error nostrum modi magnam amet perspiciatis.</p> 
+        <div class="image">
+            {% load static %} <img src="{% static "images/midd.png" %}" width="100%" alt="">
+            <!-- {% static "images/15.jpg" %} -->
+        </div>
+    </div>
+    
+        
+        
+    </section> 
+    
+        
+   
+         
+</body>
+</html>
